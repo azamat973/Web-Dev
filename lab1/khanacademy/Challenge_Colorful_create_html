@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Awesome Animals</title>
+    <meta charset="utf-8">
+    <style>
+    body {
+        background-color: rgb(250, 240, 230); 
+        font-family: Verdana, sans-serif;
+    }
+
+    h1 {
+        font-family: Arial, sans-serif;
+        color: rgb(139, 69, 19); 
+    }
+
+    p {
+        color: rgb(92, 64, 51); 
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    img {
+        border: 3px solid rgb(139, 69, 19);
+        border-radius: 10px;
+    }
+</style>
+
+
+</head>
+<body>
+<h1>Horses: The Majestic Runners</h1>
+
+<p class="horse-text">
+<strong>Horses</strong> are large, <em>graceful animals</em> known for their speed and strength. 
+They have been <strong>companions and helpers</strong> to humans for thousands of years, used for riding, work, and sport. 
+<em>They are intelligent and social creatures</em>, forming strong bonds with humans and other horses. 
+This is why horses are <strong>truly magnificent</strong>!
+</p>
+
+<img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/animals/horse.png" 
+     alt="A brown horse running in a field" width="400" height="300">
+
+<h1>Cats: The Curious Companions</h1>
+
+<p class="cat-text">
+<em>Cats</em> are small, agile mammals that have been human companions for thousands of years. 
+They are <strong>playful, curious, and independent</strong>, yet they also enjoy cuddling with their humans. 
+Cats have <strong>sharp senses</strong> and can see in low light, making them excellent hunters. 
+These little creatures are <strong>both mysterious and lovable</strong>!
+</p>
+
+<img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/animals/cat.png" 
+     alt="A cute tabby cat sitting" width="400" height="300">
+
+
+</body>
+</html>
