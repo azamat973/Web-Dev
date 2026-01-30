@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f6f8fa;
+  color: #24292f;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: white;
+  border-bottom: 1px solid #d0d7de;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #24292f;
+  margin-right: 14px;
+  font-size: 14px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.search {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+}
+
+.dashboard-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  background: #f6f8fa;
+  cursor: pointer;
+}
+
+/* HERO (жоғарғы текст) */
+.pricing h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-top: 50px;
+}
+
+.pricing > p {
+  text-align: center;
+  color: #57606a;
+  max-width: 650px;
+  margin: 16px auto;
+  line-height: 1.5;
+}
+
+.pricing > button {
+  display: block;
+  margin: 20px auto 40px;
+  padding: 14px 26px;
+  border-radius: 8px;
+  background: #24292f;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* PRICING LAYOUT */
+.pricing {
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  vertical-align: top;
+  width: 330px;
+  background: white;
+  padding: 26px;
+  margin: 15px;
+  border-radius: 14px;
+  position: relative;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.desc {
+  text-align: center;
+  color: #57606a;
+  font-size: 14px;
+}
+
+.price {
+  text-align: center;
+  font-size: 32px;
+  margin: 16px 0;
+}
+
+.price span {
+  font-size: 14px;
+  color: #57606a;
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dark-btn {
+  background: #24292f;
+  color: white;
+  border: none;
+}
+
+.light-btn {
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* LISTS */
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+li {
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+small {
+  color: #57606a;
+}
+
+.addon-title {
+  color: #0969da;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 14px;
+}
+
+/* ENTERPRISE */
+.enterprise {
+  border: 2px solid #2f81f7;
+  transform: scale(1.03);
+}
+
+.recommended {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2f81f7;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
