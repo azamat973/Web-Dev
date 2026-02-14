@@ -11,5 +11,6 @@ import { PRODUCTS } from '../../shared/data/products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = PRODUCTS; // *ngFor арқылы 10+ өнімді көрсету [citation:10]
+  products = PRODUCTS; 
+
 }
