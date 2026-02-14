@@ -5,6 +5,7 @@ export interface Product {
   price: number;
   rating: number;
   image: string;
-  images: string[];   // минимум 3 сурет
+  images: string[];   
   link: string;
+
 }
