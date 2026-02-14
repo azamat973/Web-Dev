@@ -1,13 +1,11 @@
 <div class="product-card">
-  <!-- Сурет галереясы -->
+ 
   <div class="image-gallery">
     <img [src]="product.images[currentImageIndex]" [alt]="product.name" class="main-image">
     
-    <!-- Галерея навигациясы -->
     <button class="gallery-nav prev" (click)="prevImage()" *ngIf="product.images.length > 1">❮</button>
     <button class="gallery-nav next" (click)="nextImage()" *ngIf="product.images.length > 1">❯</button>
     
-    <!-- Миниатюралар -->
     <div class="thumbnail-container" *ngIf="product.images.length > 1">
       <img *ngFor="let img of product.images; let i = index" 
            [src]="img" 
@@ -17,30 +15,23 @@
     </div>
   </div>
   
-  <!-- Өнім ақпараты -->
   <div class="product-info">
     <h3 class="product-title">{{ product.name }}</h3>
     <p class="product-description">{{ product.description }}</p>
     
-    <!-- РЕЙТИНГ ЖҰЛДЫЗШАЛАРЫ - МҰНДА Math ЖОҚ! -->
     <div class="rating">
-      <!-- Толық жұлдыздар -->
+      
       <span *ngFor="let star of getFullStars()" class="star filled">★</span>
       
-      <!-- Жарты жұлдыз (егер болса) -->
       <span *ngIf="hasHalfStar()" class="star half">★</span>
       
-      <!-- Бос жұлдыздар -->
       <span *ngFor="let empty of getEmptyStars()" class="star">☆</span>
       
-      <!-- Рейтинг саны -->
       <span class="rating-value">{{ product.rating }}</span>
     </div>
     
-    <!-- Бағасы -->
     <div class="price">{{ product.price | number }} ₸</div>
     
-    <!-- Бөлісу батырмалары -->
     <div class="share-buttons">
       <a [href]="product.link" target="_blank" class="btn kaspi-btn">Kaspi.kz-та көру</a>
       <button class="share-btn whatsapp" (click)="shareOnWhatsApp()" title="WhatsApp">
@@ -51,4 +42,5 @@
       </button>
     </div>
   </div>
+
 </div>
