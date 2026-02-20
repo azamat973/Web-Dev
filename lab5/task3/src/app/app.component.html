@@ -1,0 +1,33 @@
+<div class="app-container">
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Категориялар</h2>
+    
+    <button 
+      class="category-btn"
+      [class.active]="!selectedCategory"
+      (click)="clearSelection()">
+      🏠 Барлық категориялар
+    </button>
+    
+    <button 
+      *ngFor="let category of categories"
+      class="category-btn"
+      [class.active]="selectedCategory?.id === category.id"
+      (click)="selectCategory(category)">
+      {{ category.name }}
+    </button>
+  </aside>
+  
+  <main class="main-content">
+    <div *ngIf="!selectedCategory" class="welcome-message">
+      <h1>🏬 Kaspi.kz магазин</h1>
+      
+    </div>
+    
+    <app-product-list 
+      *ngIf="selectedCategory"
+      [products]="selectedProducts"
+      [selectedCategoryName]="selectedCategory.name">
+    </app-product-list>
+  </main>
+</div>
