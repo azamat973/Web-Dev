@@ -1,0 +1,40 @@
+
+<div *ngIf="loading" class="loader">
+  ⏳ Жүктелуде...
+</div>
+
+<div *ngIf="!loading && error" class="error-message">
+  <p>❌ {{ error }}</p>
+  <a routerLink="/albums" class="btn back-btn">🔙 Альбомдарға оралу</a>
+</div>
+
+<div class="detail-container" *ngIf="!loading && !error && album">
+  <h2>Альбом №{{ album.id }}</h2>
+  <p><strong>Қолданушы ID:</strong> {{ album.userId }}</p>
+  
+  <div class="edit-row">
+    <label for="title">Аты:</label>
+    <input 
+      id="title"
+      [(ngModel)]="editedTitle" 
+      class="edit-input"
+      placeholder="Альбом аты"
+    />
+    <button 
+      (click)="saveTitle()" 
+      class="save-btn"
+      [disabled]="editedTitle === album.title"
+    >
+      💾 Сақтау
+    </button>
+  </div>
+  
+  <div class="actions">
+    <a [routerLink]="['/albums', album.id, 'photos']" class="btn photos-btn">
+      📷 Фотосуреттер
+    </a>
+    <a routerLink="/albums" class="btn back-btn">
+      🔙 Артқа
+    </a>
+  </div>
+</div>
