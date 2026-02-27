@@ -1,0 +1,25 @@
+<div class="albums-container">
+  <h1>Альбомдар тізімі</h1>
+
+  <div *ngIf="error" class="error-message">
+    <p>❌ {{ error }}</p>
+    <button (click)="loadAlbums()" class="retry-btn">🔄 Қайталау</button>
+  </div>
+
+  <div *ngIf="loading && !error" class="loader">
+    <div class="spinner"></div>
+    <p>⏳ Альбомдар жүктелуде...</p>
+  </div>
+
+  <div *ngIf="!loading && !error && albums.length > 0" class="albums-list">
+    <div *ngFor="let album of albums" class="album-item">
+      <a [routerLink]="['/albums', album.id]" class="album-link">
+        <strong>#{{ album.id }}</strong> {{ album.title }}
+      </a>
+    </div>
+  </div>
+
+  <div *ngIf="!loading && !error && albums.length === 0" class="empty-message">
+    Әзірге альбомдар жоқ.
+  </div>
+</div>
