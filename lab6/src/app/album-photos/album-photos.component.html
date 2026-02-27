@@ -1,0 +1,16 @@
+<div class="photos-container">
+  <h2>Альбом №{{ albumId }} фотосуреттері</h2>
+  <div *ngIf="loading" class="loader">⏳ Жүктелуде...</div>
+  <div *ngIf="!loading && photos.length === 0" class="empty">
+    Бұл альбомда фотосурет жоқ.
+  </div>
+  <div class="photos-grid" *ngIf="!loading && photos.length > 0">
+    <div *ngFor="let photo of photos" class="photo-card">
+      <img [src]="photo.thumbnailUrl" [alt]="photo.title">
+      <p class="photo-title">{{ photo.title }}</p>
+    </div>
+  </div>
+  <div class="back-link">
+    <a [routerLink]="['/albums', albumId]">🔙 Альбомға оралу</a>
+  </div>
+</div>
